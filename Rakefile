@@ -17,14 +17,17 @@ spec = Gem::Specification.new do |s|
   s.version = GEM_VERSION
   s.platform = Gem::Platform::RUBY
   s.summary = SUMMARY
-  s.require_paths = ['lib']
-  s.files = FileList['lib/**/*.rb' '[A-Z]*'].to_a
+  s.require_paths = ['bin', 'lib']
+  s.files = FileList['bin/*', 'lib/**/*.rb', '[A-Z]*'].to_a
+  s.executables = ["gedit-snippets-tool"]
 
   s.author = AUTHOR
   s.email = EMAIL
   s.homepage = HOMEPAGE
 
   s.rubyforge_project = GEM # GitHub bug, gem isn't being build when this miss
+
+  #s.add_dependency(%q<rubigen>, [">= 1.3.4"])
 end
 
 Spec::Rake::SpecTask.new do |t|
