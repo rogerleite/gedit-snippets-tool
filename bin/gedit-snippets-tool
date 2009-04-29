@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+
+#require 'gedit-snippet-tool'
+
+GEM_VERSION = "0.2.0"
+
+args = ARGV.dup
+ARGV.clear
+command = args.shift.strip rescue '--help'
+
+if %w(-h --help).include? command
+    puts "#{File.basename($0)} help description ..."
+    exit(0)
+elsif %w(-v --version).include? command
+    puts "#{File.basename($0)} #{GEM_VERSION}"
+    exit(0)
+else
+    puts "Command: #{command} args: #{args.to_s}"
+end
+
