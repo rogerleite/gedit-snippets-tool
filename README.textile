@@ -1,18 +1,19 @@
 h2. DESCRIPTION AND MOTIVATION:
 
-Tool to generate cheat sheet of gedit's snippets.
+Tool to generate cheat sheet of "gedit's snippets":http://live.gnome.org/Gedit/Plugins/Snippets .
+
 Gedit's snippets are personal files that you can change any time, and now, you can have your "custom" cheat sheet any time too.
 
 h2. INSTALLATION:
 
-@sudo gem install RogerLeite-gedit-snippets-tool -s http://gems.github.com@
+@sudo gem install rogerleite-gedit-snippets-tool -s http://gems.github.com@
 
 h2. USAGE
 
-To generate a cheat sheet with all your snippets:
+To generate a cheat sheet with all your snippets:<br>
 @gedit-snippets-tool -cs > ~/mycheatsheet.xhtml@
 
-To generate a cheat sheet with all your snippets that starts with "ruby":
+To generate a cheat sheet with all your snippets that starts with "ruby":<br>
 @gedit-snippets-tool -cs ruby* > ~/mycheatsheet.xhtml@
 
 After that, you can access you new brand cheat sheet at your home folder.
