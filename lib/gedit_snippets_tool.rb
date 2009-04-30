@@ -1,4 +1,5 @@
-require 'snippet'
+require File.expand_path(File.dirname(__FILE__) + "/snippet")
+#require 'snippet'
 
 module GeditSnippetsTool
 

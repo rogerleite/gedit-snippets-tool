@@ -1,10 +1,10 @@
-require File.expand_path(File.dirname(__FILE__) + "/../lib/gedit_snippets_tool.rb")
-include GeditSnippetsTool
+require File.expand_path(File.dirname(__FILE__) + "/../lib/gedit_snippets_tool")
+#include GeditSnippetsTool
 
 describe GeditSnippetsTool do
 
     before do
-        @commands = Commands.new
+        @commands = GeditSnippetsTool::Commands.new
     end
 
     it "should have a version" do
