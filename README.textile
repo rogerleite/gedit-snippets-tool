@@ -9,9 +9,15 @@ h2. INSTALLATION:
 
 h2. USAGE
 
+To generate a cheat sheet with all your snippets:
+@gedit-snippets-tool -cs > ~/mycheatsheet.xhtml@
+
+To generate a cheat sheet with all your snippets that starts with "ruby":
 @gedit-snippets-tool -cs ruby* > ~/mycheatsheet.xhtml@
 
-In the example above, all snippets that starts with "ruby" will be used to generate your custom cheat sheet. After that, you can access you new brand cheat sheet at your home folder.
+After that, you can access you new brand cheat sheet at your home folder.
+
+**IMPORTANT:** gedit-snippets-tool reads your "{home-folder}/.gnome2/gedit/snippets/" folder. I noticed that default use of snippet plugin uses "/usr/share/gedit-2/plugins/snippets/" folder. So please, with you want to generate your cheat sheets, copy the contents from "/usr/share/gedit-2/plugins/snippets/" to "{home-folder}/.gnome2/gedit/snippets/". Thanks!
 
 h2. LICENSE:
 
