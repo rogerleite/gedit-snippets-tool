@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.default_executable = %q{gedit-snippets-tool}
   s.email = %q{roger.leite@1up4dev.org}
   s.executables = ["gedit-snippets-tool"]
-  s.files = ["bin/gedit-snippets-tool", "lib/gedit_snippets_tool.rb", "lib/snippet.rb", "Rakefile", "README.textile"]
+  s.files = ["bin/gedit-snippets-tool", "lib/gedit_snippets_tool.rb", "lib/snippet.rb", "template/template.eruby", "Rakefile", "README.textile"]
   s.homepage = %q{http://1up4dev.org}
   s.require_paths = ["bin", "lib"]
   s.rubyforge_project = %q{gedit-snippets-tool}
@@ -22,8 +22,11 @@ Gem::Specification.new do |s|
     s.specification_version = 2
 
     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
+      s.add_runtime_dependency(%q<erubis>, [">= 2.6.4"])
     else
+      s.add_dependency(%q<erubis>, [">= 2.6.4"])
     end
   else
+    s.add_dependency(%q<erubis>, [">= 2.6.4"])
   end
 end

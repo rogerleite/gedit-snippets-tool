@@ -6,7 +6,7 @@ class Snippet
 
   def self.all(snippet_name=nil)
     snippet_name = '*' if snippet_name.nil?
-    path_to_xmls = ENV['HOME'] + "/.gnome2/gedit/snippets/#{snippet_name}.xml" if path_to_xmls.nil?
+    path_to_xmls = ENV['HOME'] + "/.gnome2/gedit/snippets/#{snippet_name}.xml"
 
     snippets = {}
     Dir.glob(path_to_xmls).each do |file|

@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Cheat Sheet Gedit Snippets</title>
+  <style>
+    span {
+      border-bottom: 1px solid;
+      text-align: center;
+      font-size: 3em;
+    }
+
+    table {
+      width: 768px;
+    }
+
+    tr.even {
+    }
+
+    tr.odd {
+      background: lightgray;
+    }
+
+    td {
+      border-bottom: 1px solid;
+    }
+  </style>
+</head>
+<body>
+
+<br/>
+
+<% @hash_of_snippets.each_pair do |snippet_name, snippets| %>
+  <span><%= snippet_name %></span>
+  <table>
+    <% snippets.each_with_index do |snippet, index| %>
+      <tr class="<%= index % 2 == 0 ? 'even' : 'odd' %>">
+        <td>
+          <%= snippet.description %> (<b><%= snippet.tag %></b>) <br/>
+          <blockquote>
+          <%= snippet.text %>
+          </blockquote>
+          <% if not snippet.accelerator.nil? %>
+            <br/> accelerator: <%= snippet.accelerator %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+  <br/>
+<% end %>
+
+</body>
+</html>
+

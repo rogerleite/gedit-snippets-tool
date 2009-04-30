@@ -1,5 +1,5 @@
 require File.expand_path(File.dirname(__FILE__) + "/snippet")
-#require 'snippet'
+require 'erubis'
 
 module GeditSnippetsTool
 
@@ -35,9 +35,19 @@ module GeditSnippetsTool
         end
 
         def generate_cheat_sheet(snippet_name=nil)
-            #puts "generate_cheat_sheet"
+
             hash_of_snippets = Snippet.all(snippet_name)
-            puts hash_of_snippets
+
+            input = File.read(File.expand_path(File.dirname(__FILE__) + "/../template/template.eruby"))
+            eruby = Erubis::EscapedEruby.new(input)      # create Eruby object
+
+            ## create context object
+            ## (key means var name, which may be string or symbol.)
+            context = {
+              :hash_of_snippets  => hash_of_snippets
+            }
+
+            puts eruby.evaluate(context)         # get result
         end
 
     end
