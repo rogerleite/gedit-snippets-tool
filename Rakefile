@@ -5,10 +5,10 @@ require 'rake/gempackagetask'
 require 'spec/rake/spectask'
 
 GEM = "gedit-snippets-tool"
-GEM_VERSION = "0.2.0"
+GEM_VERSION = "0.2.1"
 SUMMARY = "Tool to generate cheat sheet of gedit's snippets"
 AUTHOR = "Roger Leite"
-EMAIL = "roger.leite@1up4dev.org"
+EMAIL = "roger.barreto@gmail.com"
 HOMEPAGE = "http://1up4dev.org"
 
 
