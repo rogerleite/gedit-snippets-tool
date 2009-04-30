@@ -1,3 +1,5 @@
+require 'snippet'
+
 module GeditSnippetsTool
 
     VERSION = '0.2.0'
@@ -12,7 +14,7 @@ module GeditSnippetsTool
             elsif %w(-v --version).include? command
                 puts "#{File.basename($0)} #{VERSION}"
             elsif %w(-cs --cheat-sheet).include? command
-                generate_cheat_sheet
+                generate_cheat_sheet args[0]
             else
                 puts "Unknow command '#{command}'"
                 puts ""
@@ -31,8 +33,10 @@ module GeditSnippetsTool
             puts ""
         end
 
-        def generate_cheat_sheet
-            puts "generate_cheat_sheet"
+        def generate_cheat_sheet(snippet_name=nil)
+            #puts "generate_cheat_sheet"
+            hash_of_snippets = Snippet.all(snippet_name)
+            puts hash_of_snippets
         end
 
     end

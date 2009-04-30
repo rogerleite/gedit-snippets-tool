@@ -21,6 +21,11 @@ describe GeditSnippetsTool do
         @commands.execute(['--cheat-sheet'])
     end
 
+    it "should respond for -cs argument with specific snippet name" do
+        @commands.should_receive(:generate_cheat_sheet).with('ruby*')
+        @commands.execute( %w(-cs ruby*) )
+    end
+
     it "should respond with help for invalid argument" do
         @commands.should_receive(:show_help)
         @commands.execute(['-Xnksnksn'])
