@@ -5,13 +5,13 @@ Gedit's snippets are personal files that you can change any time, and now, you c
 
 h2. INSTALLATION:
 
-@sudo gem install rogerleite-gedit-snippets-tool -s http://gems.github.com@
+@sudo gem install RogerLeite-gedit-snippets-tool -s http://gems.github.com@
 
 h2. USAGE
 
 @gedit-snippets-tool -cs ruby* > ~/mycheatsheet.xhtml@
 
-In the example above, all snippets that starts with "ruby" will be used to generate your custom cheat sheet.
+In the example above, all snippets that starts with "ruby" will be used to generate your custom cheat sheet. After that, you can access you new brand cheat sheet at your home folder.
 
 h2. LICENSE:
 
