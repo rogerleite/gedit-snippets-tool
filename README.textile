@@ -10,10 +10,10 @@ h2. INSTALLATION:
 
 h2. USAGE
 
-To generate a cheat sheet with all your snippets:<br>
+To generate a cheat sheet with all your snippets: <br>
 @gedit-snippets-tool -cs > ~/mycheatsheet.xhtml@
 
-To generate a cheat sheet with all your snippets that starts with "ruby":<br>
+To generate a cheat sheet with all your snippets that starts with "ruby": <br>
 @gedit-snippets-tool -cs ruby* > ~/mycheatsheet.xhtml@
 
 After that, you can access you new brand cheat sheet at your home folder.
